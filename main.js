@@ -14,31 +14,42 @@ const contacts = require('./data.json');
 //You can put your solutions after each comment below:
 
 //1. an array that contains all of the contacts that work at INSECTUS
-const InsectusContacts = () => {
+// const InsectusContacts = () => {
+//     const filteredContacts = []
+
+//     for (const contact of contacts) {
+//         if (contact.company == "INSECTUS") 
+//             filteredContacts.push(contact)
+//     }
+//     return filteredContacts
+// } 
+
+// console.log(InsectusContacts())
+
+// //2. an array all of the contacts, with only the name property
+// const Names = () => {
+//     const names = []
+//     for (const contact of contacts) {
+//         names.push(contact.name)
+//     }
+//     return names
+// }
+
+// console.log(Names())
+
+//3. an array of all of the contacts over the age of 50
+const ContactsOver50 = () => {
     const filteredContacts = []
 
     for (const contact of contacts) {
-        if (contact.company == "INSECTUS") 
+        if (contact.age > 50) {
             filteredContacts.push(contact)
+        }
     }
     return filteredContacts
-} 
-
-console.log(InsectusContacts())
-
-//2. an array all of the contacts, with only the name property
-const Names = () => {
-    const names = []
-    for (const contact of contacts) {
-        names.push(contact.name)
-    }
-    return names
 }
 
-console.log(Names())
-
-//3. an array of all of the contacts over the age of 50
-
+console.log(ContactsOver50())
 //4. the first ten contacts when alphabetically ordered by name
 
 //5. the oldest person's name
