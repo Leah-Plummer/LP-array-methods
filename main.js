@@ -14,8 +14,20 @@ const contacts = require('./data.json');
 //You can put your solutions after each comment below:
 
 //1. an array that contains all of the contacts that work at INSECTUS
+const InsectusContacts = () => {
+    const filteredContacts = []
+
+    for (const contact of contacts) {
+        if (contact.company == "INSECTUS") 
+            filteredContacts.push(contact)
+    }
+    return filteredContacts
+} 
+
+console.log(InsectusContacts())
 
 //2. an array all of the contacts, with only the name property
+
 
 //3. an array of all of the contacts over the age of 50
 
