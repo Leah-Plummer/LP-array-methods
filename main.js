@@ -52,32 +52,46 @@ const contacts = require('./data.json');
 // console.log(ContactsOver50())
 
 //4. the first ten contacts when alphabetically ordered by name
-const FirstTenAlphabetically = () => {
-    const filteredContactsNames = []
-    const filteredContacts = []
-    for (const contact of contacts) {
-        filteredContactsNames.push(contact.name)
-        filteredContactsNames.sort()
+// const FirstTenAlphabetically = () => {
+//     const filteredContactsNames = []
+//     const filteredContacts = []
+//     for (const contact of contacts) {
+//         filteredContactsNames.push(contact.name)
+//         filteredContactsNames.sort()
       
-    }
+//     }
 
-    for (let i = 0; i < 10; i++) {
+//     for (let i = 0; i < 10; i++) {
 
-    for (const contact of contacts) {
-        if(contact.name == filteredContactsNames[i])
-        {
-            filteredContacts.push(contact)
-        }
-    }
+//     for (const contact of contacts) {
+//         if(contact.name == filteredContactsNames[i])
+//         {
+//             filteredContacts.push(contact)
+//         }
+//     }
     
-}        
-        return filteredContacts
-}
+// }        
+//         return filteredContacts
+// }
 
-console.log(FirstTenAlphabetically())
+// console.log(FirstTenAlphabetically())
 
 //5. the oldest person's name
+const OldestName = () => {
+    let name = ''
+    let age = 0
+    for (const contact of contacts) {
+        if (age < contact.age){
+            age = contact.age
+            name= contact.name
+           
+        }
+    }
+    return name
 
+}
+
+console.log(OldestName())
 
 
 //6. the contact id with the name Isabella Burke
