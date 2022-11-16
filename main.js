@@ -77,24 +77,43 @@ const contacts = require('./data.json');
 // console.log(FirstTenAlphabetically())
 
 //5. the oldest person's name
-const OldestName = () => {
-    let name = ''
-    let age = 0
-    for (const contact of contacts) {
-        if (age < contact.age){
-            age = contact.age
-            name= contact.name
+// const OldestName = () => {
+//     let name = ''
+//     let age = 0
+//     for (const contact of contacts) {
+//         if (age < contact.age){
+//             age = contact.age
+//             name= contact.name
            
-        }
-    }
-    return name
+//         }
+//     }
+//     return name
 
-}
+// }
 
-console.log(OldestName())
+// console.log(OldestName())
 
 
 //6. the contact id with the name Isabella Burke
+const IsabellaBurke = () => {
+    
+    let person = {
+        name: 'Isabella Burke',
+        id: 0
+    }
+
+    for (const contact of contacts) {
+
+        if (contact.name == person.name){
+            id = contact.id
+        }
+
+    }
+    return person
+}
+
+console.log(IsabellaBurke())
+
 
 //7. an array of all of the contacts, but with the name split up into a firstName
 // and lastName properties
