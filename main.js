@@ -27,7 +27,15 @@ const InsectusContacts = () => {
 console.log(InsectusContacts())
 
 //2. an array all of the contacts, with only the name property
+const Names = () => {
+    const names = []
+    for (const contact of contacts) {
+        names.push(contact.name)
+    }
+    return names
+}
 
+console.log(Names())
 
 //3. an array of all of the contacts over the age of 50
 
